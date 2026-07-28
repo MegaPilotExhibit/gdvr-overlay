@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0a0e14"/>
+<stop offset="0.5" stop-color="#10151f"/>
+<stop offset="1" stop-color="#0c1220"/>
+</linearGradient>
+<linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#161c2b"/>
+<stop offset="1" stop-color="#0b0f18"/>
+</linearGradient>
+<radialGradient id="glowRed" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#ff3b5c" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#ff3b5c" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#38e0ff" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#38e0ff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#38e0ff"/>
+<stop offset="0.6" stop-color="#7a5cff"/>
+<stop offset="1" stop-color="#ff3b5c"/>
+</linearGradient>
+<linearGradient id="textGlow" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff"/>
+<stop offset="1" stop-color="#c9d6ff"/>
+</linearGradient>
+</defs>
+
+<rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+<!-- ambient glows -->
+<circle cx="980" cy="90" r="220" fill="url(#glowCyan)"/>
+<circle cx="1030" cy="260" r="180" fill="url(#glowRed)"/>
+
+<!-- faint grid backdrop -->
+<g stroke="#1c2536" stroke-width="1">
+<line x1="0" y1="60" x2="1200" y2="60"/>
+<line x1="0" y1="120" x2="1200" y2="120"/>
+<line x1="0" y1="300" x2="1200" y2="300"/>
+<line x1="200" y1="0" x2="200" y2="360"/>
+<line x1="850" y1="0" x2="850" y2="360"/>
+</g>
+
+<!-- monitor / capture screen on right -->
+<g transform="translate(760,60)">
+<rect x="0" y="0" width="380" height="220" rx="14" fill="url(#screenGrad)" stroke="#2a3550" stroke-width="2"/>
+<rect x="14" y="14" width="352" height="150" rx="6" fill="#060a12" stroke="#22304a" stroke-width="1.5"/>
+
+<!-- waveform/gameplay lines inside screen -->
+<polyline points="24,120 50,90 70,130 95,70 120,110 145,60 170,100 195,50 220,95 245,75 270,110 295,65 320,100 345,80" fill="none" stroke="#38e0ff" stroke-width="2" opacity="0.85"/>
+<polyline points="24,140 50,125 70,145 95,110 120,135 145,100 170,130 195,95 220,125 245,105 270,130 295,100 320,120 345,105" fill="none" stroke="#ff3b5c" stroke-width="2" opacity="0.55"/>
+
+<!-- REC indicator -->
+<circle cx="34" cy="30" r="7" fill="#ff3b5c"/>
+<circle cx="34" cy="30" r="12" fill="none" stroke="#ff3b5c" stroke-width="1.5" opacity="0.5"/>
+<text x="50" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#ff8fa3" font-weight="600" letter-spacing="2">REC</text>
+
+<!-- timeline / buffer scrubber -->
+<rect x="14" y="182" width="352" height="10" rx="5" fill="#1a2236"/>
+<rect x="14" y="182" width="230" height="10" rx="5" fill="url(#barGrad)"/>
+<circle cx="244" cy="187" r="8" fill="#ffffff"/>
+<circle cx="244" cy="187" r="12" fill="none" stroke="#38e0ff" stroke-width="1.5" opacity="0.6"/>
+
+<!-- clip markers -->
+<rect x="90" y="176" width="4" height="22" fill="#ffd166"/>
+<rect x="160" y="176" width="4" height="22" fill="#ffd166"/>
+<rect x="300" y="176" width="4" height="22" fill="#ffd166"/>
+
+<text x="14" y="210" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#7d8ba8">-00:32 buffer</text>
+<text x="300" y="210" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#7d8ba8">clip.mp4</text>
+</g>
+
+<!-- decorative corner circuit lines -->
+<g stroke="#2a3550" stroke-width="2" fill="none" opacity="0.7">
+<path d="M0,340 L40,340 L40,320 L90,320"/>
+<circle cx="90" cy="320" r="4" fill="#38e0ff" stroke="none"/>
+<path d="M0,300 L20,300 L20,270 L60,270"/>
+<circle cx="60" cy="270" r="4" fill="#ff3b5c" stroke="none"/>
+</g>
+
+<!-- headline -->
+<text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="800" fill="url(#textGlow)" textLength="700" lengthAdjust="spacingAndGlyphs">
+Game DVR Recorder
+</text>
+
+<!-- accent underline -->
+<rect x="62" y="168" width="220" height="6" rx="3" fill="url(#barGrad)"/>
+
+<!-- tagline -->
+<text x="60" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#a9b7d6" textLength="640" lengthAdjust="spacingAndGlyphs">
+Capture, buffer, clip — background recorder,
+</text>
+<text x="60" y="250" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#a9b7d6" textLength="440" lengthAdjust="spacingAndGlyphs">
+instant replay, one .exe
+</text>
+
+<!-- small feature chips -->
+<g font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#0a0e14" font-weight="600">
+<rect x="62" y="272" width="130" height="34" rx="17" fill="#38e0ff" opacity="0.9"/>
+<text x="80" y="295">Instant Replay</text>
+
+<rect x="204" y="272" width="110" height="34" rx="17" fill="#ff3b5c" opacity="0.9"/>
+<text x="222" y="295">Background</text>
+</g>
+</svg>
